@@ -103,7 +103,7 @@ if __name__ == "__main__":
     import json
     import numpy
     import open3d
-    from mujindetectorcadmatching.shared.debugtools.visualize3d import DrawPlanesWithPoints, Draw3DPoints, Draw3DPlane, ConvertContainerPlanesToCorners
+    from container_with_target import DrawPlanesWithPoints, Draw3DPoints, Draw3DPlane, ConvertContainerPlanesToCorners
     with open("/tmp/youcandelete/validateByContainer_0.json", 'r') as file:                                                         
         aa = json.load(file)
     
