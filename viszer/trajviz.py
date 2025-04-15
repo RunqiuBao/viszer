@@ -41,7 +41,8 @@ def LoadTraj(format: str, pathToTraj: str, Tbias: numpy.ndarray=None):
 
 def DrawTraj(format: str, listPathToTraj: List[str], listScaleFactors: List[int]):
     listPcd = []
-    for pathToTraj, scaleFactor in zip(listPathToTraj, listScaleFactors):
+    for indexTraj, pathToTraj in enumerate(listPathToTraj):
+        scaleFactor = listScaleFactors[indexTraj] if listScaleFactors is not None else 1.0
         trajPoses = LoadTraj(format, pathToTraj)
         positions = numpy.array([pose[:3, 3] for pose in trajPoses]) * scaleFactor
         colors = numpy.random.rand(1, 3)  # Random RGB colors
