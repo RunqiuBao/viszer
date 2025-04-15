@@ -24,5 +24,8 @@ classifiers = [
 ]
 requires-python = ">=3.8"  # Specify Python version compatibility
 
+[project.scripts]
+trajviz = "viszer.trajviz:main"
+
 [tool.hatch.metadata]
 allow-direct-references = true  # Optional: for direct dependency references
